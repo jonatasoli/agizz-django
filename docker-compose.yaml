@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: agizz_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: agizz
+    ports:
+      - "5432:5432"
+    volumes:
+      - "agizz-database:/var/lib/postgresql/data"
+    networks:
+      - agizz
+
+networks:
+  agizz:
+
+volumes:
+  agizz-database:
