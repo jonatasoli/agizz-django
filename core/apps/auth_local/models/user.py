@@ -12,8 +12,8 @@ class User(AbstractBaseUser, PermissionsMixin, ModelMixin):
         ('super admin', 'Super Admin'),
     )
 
-    name = models.CharField(max_length=150)
-    last_name = models.CharField(max_length=150)
+    name = models.CharField(max_length=150, blank=True)
+    last_name = models.CharField(max_length=150, blank=True)
     cpf_cnpj = models.CharField(max_length=14, unique=True)
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20, unique=True)
