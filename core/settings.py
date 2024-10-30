@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 LOCAL_APPS = [
     "core.apps.auth_local.apps.AuthLocalConfig",
     "core.apps.base.apps.BaseConfig",
+    "core.apps.subscription.apps.SubscriptionConfig",
+    "core.apps.class.apps.ClassConfig",
 ]
 
 INSTALLED_APPS += LOCAL_APPS
